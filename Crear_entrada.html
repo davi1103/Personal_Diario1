@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear entrada </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+            tinymce.init({
+              selector: '#exampleFormControlTextarea1',  // Usa el ID de tu <textarea>
+              plugins: 'lists link image preview',  // Aquí puedes añadir plugins adicionales si lo necesitas
+              toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | outdent indent',
+              menubar: false,  // Esto es para ocultar la barra de menú y mostrar solo la barra de herramientas
+              max_length: 500,  // Esta opción no es parte de TinyMCE, necesitarás gestionar la longitud máxima del texto con otro método
+            });
+    </script>
+    <script>
+        tinymce.init({
+          selector: '#title_entrada',  // Usa el ID de tu <textarea>
+          plugins: 'lists link image preview',  // Aquí puedes añadir plugins adicionales si lo necesitas
+          toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright alignjustify | outdent indent',
+          menubar: false,  // Esto es para ocultar la barra de menú y mostrar solo la barra de herramientas
+          max_length: 500,  // Esta opción no es parte de TinyMCE, necesitarás gestionar la longitud máxima del texto con otro método
+        });
+    </script>
+
+    
+    </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-" style="background-color: goldenrod;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Crear_entrada.html">
+                <span style="color: white; font-size: 24px; font-weight: bold; font-family: Georgia, sans-serif;">MI DIARIO PERSONAL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#" style="color: white;"></a>
+                  </li>
+              </ul>
+              <span class="navbar-text">
+                  <a href="index..html">
+                      <button class="btn btn-sm" type="button" style="background-color: white; color: black; border-color: white;">
+                          <i class="circle"></i> Cerrar Sesión
+                      </button>
+                  </a>
+              </span>
+          </div>
+          
+        </div>
+    </nav>
+    <div class="container-fluid">
+
+
+        <aside style="background-image: url('img/f2.jpg'); background-size: cover; background-position: center;">
+            <center>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Crear_entrada" data-bs-whatever="@mdo">Agregar Entrada</button>
+                <a href="Buscar_entrada.html">
+                    <button class="btn btn-danger">Buscar Entradas</button>
+                </a>
+            </center>
+        </aside>
+        
+
+
+        <!-- __boton agregar entrada_ -->
+        
+
+
+        <div class="modal fade" id="Crear_entrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ingresa los datos de tu nueva entrada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="mb-3">
+                                <label for="title_entrada" class="form-label">Titulo</label>
+                                <input type="" class="form-control" id="title_entrada"
+                                    placeholder="Ingresar el titulos de tu entrada " >
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Descripcion </label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" 
+                                placeholder="Solo se admiten 500 caracteres como máximo"></textarea>
+                                
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="formFileMultiple" class="form-label">Agregar foto </label>
+                                 <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            </div>
+
+                            <br>
+                           <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Guardar</button>
+                    
+                    </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                </ul>
+                <p class="text-center text-muted">© 2022 Company, Inc</p>
+            </footer>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        
+       
+
+</body>
+
+</html>
